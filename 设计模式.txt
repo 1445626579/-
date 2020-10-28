@@ -9,15 +9,35 @@
  就可以对吃的方法抽象，而动物和食物交给管理器来管理
  
  代码示例：
- 
+ //定义一个吃的类
  class Eat {
-  slowEat(){
-    return "慢慢吃"
-  },
-  eat(){
-    return "正常吃"
-  },
-  fastEat(){
-    return "快速吃"
+  slowEat(food){
+    return this.name+"慢慢吃"+food
+  }
+  eat(food){
+    return this.name+"吃"+food
+  }
+  fastEat(food){
+    return this.name+"快速吃"+food
   }
  }
+//定义食物
+class Food {
+ constructor(name,type){
+  this.foodName=name
+  this.type=type
+ }
+
+}
+ //定义动物
+class Animal extends Eat{
+ constructor(name,type){
+  super()
+  this.name=name
+  this.type=type
+ }
+}
+
+var tomcat =  new Animal('Tom',"cat")
+var food= new Food('Jerry','mouse')
+tomcat.eat(food.foodName)//Tom吃Jerry
