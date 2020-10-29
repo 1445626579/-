@@ -20,7 +20,7 @@
     return this.name+"吃"+food
   }
   fastEat(food){
-    return this.name+"快速吃"+food
+    return this.name+"狼吞虎咽的吃"+food
   }
  }
 //定义食物
