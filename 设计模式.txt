@@ -8,6 +8,8 @@
  
  就可以对吃的方法抽象，而动物和食物交给管理器来管理
  
+
+ 
  代码示例：
  //定义一个吃的类
  class Eat {
@@ -41,3 +43,9 @@ class Animal extends Eat{
 var tomcat =  new Animal('Tom',"cat")
 var food= new Food('Jerry','mouse')
 tomcat.eat(food.foodName)//Tom吃Jerry
+
+var sheep = new Animal("小羊肖恩",'sheep')
+
+sheep.slowEat("草")//小羊肖恩慢慢吃草
+
+总结： 尽可能对变量进行抽离，用固定的方法连接变量，以一个固定的模式达成不同的目标。如动物吃食物，动物可能是任何动物，但是吃的动作是相同的。所以定义一个不变的类，类的方法是个纯函数，函数对变量动物与食物连接，以形成某种固定的动作
