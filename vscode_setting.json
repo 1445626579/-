@@ -1,63 +1,82 @@
 {
     "git.ignoreMissingGitWarning": true,
-    "terminal.integrated.rendererType": "dom",
-    "vetur.validation.template": false,
+    "vetur.validation.template": true,
+    "editor.codeActionsOnSave": {
+        // For ESLint
+        "source.fixAll.eslint": true,
+        // For TSLint
+        "source.fixAll.tslint": true,
+        // For Stylelint
+        "source.fixAll.stylelint": true
+        },
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
     // "vetur.format.defaultFormatter.js": "vscode-typescript",
     "vetur.format.defaultFormatter.js": "prettier-eslint",
-    "prettier.semi": true,
-    "prettier.singleQuote": false,
+    "prettier.singleQuote": true,
     "prettier.trailingComma": "none",
     "vetur.format.defaultFormatterOptions": {
-      "js-beautify-html": {
-        // force-aligned | force-expand-multiline
-        "wrap_attributes": "force-aligned",
-        "prettier": {
-          "semi": true,
-          "singleQuote": false
-        }
-      },
-      "prettyhtml": {
+        "js-beautify-html": {
+            "wrap_attributes": "force-aligned",
+            "prettier": {
+                "semi": false,
+                "singleQuote": true
+            }
+        },
+        "prettyhtml": {
         "printWidth": 100, //使用不同的最大行长度
-        "singleQuote": false,
+        "singleQuote": true,
         "wrapAttributes": false, //强制换行属性（当它有多个时，默认值为false）
         "sortAttributes": true //按字母顺序排序属性（默认值：false）
-      },
-      "prettier": {
-        "semi": true, //代码行后面需不需要生成分号
-        "singleQuote": false, //需不需要把双引号格式化成单引号
-        "trailingComma": "all" //在任何可能的多行中输入尾逗号。
-      }
+        },
+        "prettier": {
+            "semi": false, //代码行后面需不需要生成分号
+            "singleQuote": true, //需不需要把双引号格式化成单引号
+            "trailingComma": "none" //在任何可能的多行中输入尾逗号。
+        }
     },
-    //文本自动换行
+  //文本自动换行
     "editor.wordWrap": "on",
     "editor.renderWhitespace": "all",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "search.followSymlinks": false,
     "window.zoomLevel": 0,
     "editor.detectIndentation": false,
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
     "window.newWindowDimensions": "inherit",
     "window.openFoldersInNewWindow": "on",
     "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "numso.prettier-standard-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "numso.prettier-standard-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
     },
     "explorer.confirmDelete": false,
-    "[vue]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "editor.fontSize": 14,
-    "workbench.editorAssociations": [
-    
-    ],
     //代码格式化快捷键及保存时自动格式化
     "editor.formatOnType": true,
     "editor.formatOnSave": true,
-    "typescript.format.semicolons": "insert",
-    "javascript.preferences.quoteStyle": "double",
-    "typescript.preferences.quoteStyle": "double",
-    "terminal.integrated.shell.osx": "/bin/zsh",
+    "typescript.format.semicolons": "remove",
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
     "prettier.arrowParens": "avoid",
     "editor.autoClosingBrackets": "always",
-    "http.proxyAuthorization": null
-  }
+    "http.proxyAuthorization": null,
+    "prettier.printWidth": 160,
+    "prettier.jsxSingleQuote": true,
+    "git.confirmSync": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "prettier.tabWidth": 4,
+    "editor.tabCompletion": "on",
+    "terminal.integrated.tabs.focusMode": "singleClick",
+    "vetur.format.options.tabSize": 4,
+    "vetur.format.options.useTabs": true,
+    "vetur.format.scriptInitialIndent": true,
+    "javascript.format.semicolons": "remove",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "prettier.insertPragma": true,
+    "prettier.semi": false,
+    "prettier.requireConfig": true
+}
