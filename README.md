@@ -14,3 +14,6 @@ tsconfig 添加该选项可以不用声明具体的key使用对象
 
 "suppressImplicitAnyIndexErrors":true,
 
+
+## vscode 插件 
+koroFileHeader 自动生成头注释信息
